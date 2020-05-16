@@ -25,7 +25,7 @@ done
 # Excutes simulations
 for FILE in 1 2 3 4 5
 do
-    for ALG in LazySkipList
+    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet LazySkipList
     do
 		for LIST_SIZE in 1000 2000 5000 8000 10000 12000 15000 20000
 		do
