@@ -140,10 +140,10 @@ public class PlotFileDeploy {
 		String a = "../updateResult/update_compare_1/CoarseGrainedListBasedSet/1000/10/";
 		String b = a.substring(33).replaceAll("/", "_") + 12 + ".txt";
 		
-		/*
+		
 		System.out.println(a);
 		System.out.println(a.substring(33).replaceAll("/", "_") + 12 + ".txt");
 		System.out.println(a + b);
-		*/
+		
 	}
 }
