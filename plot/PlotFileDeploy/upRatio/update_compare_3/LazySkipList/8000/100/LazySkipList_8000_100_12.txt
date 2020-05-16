@@ -16,36 +16,36 @@ Benchmark parameters
   WarmUp:                  	0 s
   Iterations:              	1
   Benchmark:               	skiplists.lockbased.LazySkipList
-Thread #9 finished.
 Thread #10 finished.
+Thread #6 finished.
+Thread #0 finished.
+Thread #5 finished.
 Thread #3 finished.
 Thread #11 finished.
-Thread #6 finished.
-Thread #5 finished.
-Thread #0 finished.
-Thread #2 finished.
-Thread #7 finished.
-Thread #8 finished.
 Thread #4 finished.
 Thread #1 finished.
+Thread #8 finished.
+Thread #2 finished.
+Thread #9 finished.
+Thread #7 finished.
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
   Average traversal length: 	NaN
   Struct Modifications:     	0
-  Throughput (ops/s):       	1.6257718547986075E7
-  Elapsed time (s):         	2.011
-  Operations:               	32694272	( 100 %)
-    effective updates:     	16341359	( 49.98 %)
-    |--add successful:     	8170725	( 24.99 %)
-    |--remove succ.:       	8170634	( 24.99 %)
+  Throughput (ops/s):       	1.6286108013937283E7
+  Elapsed time (s):         	2.009
+  Operations:               	32718791	( 100 %)
+    effective updates:     	16359934	( 50.00 %)
+    |--add successful:     	8179994	( 25.00 %)
+    |--remove succ.:       	8179940	( 25.00 %)
     |--addAll succ.:       	0	( 0.00 %)
     |--removeAll succ.:    	0	( 0.00 %)
     size successful:       	0	( 0.00 %)
     contains succ.:        	0	( 0.00 %)
-    unsuccessful ops:      	16352913	( 50.02 %)
-  Final size:              	8091
-  Expected size:           	8091
+    unsuccessful ops:      	16358857	( 50.00 %)
+  Final size:              	8054
+  Expected size:           	8054
 -------------------------------------------------------------------------------
 TM statistics
 -------------------------------------------------------------------------------
