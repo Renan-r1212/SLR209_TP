@@ -17,6 +17,7 @@ public class PlotFileDeploy {
 	private final int threadOffset = 4;
 	
 	private ProcessBuilder pb;
+	private Process process;
 	private String[] Container;
 	private String[] algoList;
 	private Integer[] listSizeList;
@@ -32,6 +33,7 @@ public class PlotFileDeploy {
 	public PlotFileDeploy() {
 		simuResultList = new ArrayList<String>();
 		plotPathList   = new ArrayList<String>();
+		pb = new ProcessBuilder("echo Environment deployed");
 				
 		algoList = new String[] {"CoarseGrainedListBasedSet",
 								 "HandsOverHandsSet",
@@ -48,9 +50,10 @@ public class PlotFileDeploy {
 	}
 	
 	public void generatePlotEnvironment() {
-			pb = new ProcessBuilder("bash deployPathEnvironment.sh", "&& echo Environment deployed");
+			
 			try {
-				pb.start();
+				//pb = new ProcessBuilder("echo hello");
+				process = pb.start();
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -171,6 +174,19 @@ public class PlotFileDeploy {
 	}
 	
 	public static void main(String[] args) {
+		PlotFileDeploy d = new PlotFileDeploy();
+		
+		ProcessBuilder pub = new ProcessBuilder("echo hello");
+		try {
+			pub.start();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//d.generatePlotEnvironment();
+		
+		System.out.print("hello");
+		//System.out.print(d.getThroughputList("simuDataPath.txt"));
 		
 	}
 }
