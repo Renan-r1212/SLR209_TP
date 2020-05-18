@@ -15,6 +15,7 @@ import java.util.stream.*;
 public class PlotFileDeploy {
 	private final int numOfSimulations = 5;
 	private final int threadOffset = 4;
+	private final int updateRatioNum = 3;
 	
 	private ProcessBuilder pb;
 	private Process process;
@@ -26,6 +27,7 @@ public class PlotFileDeploy {
 	private ArrayList<String> simuResultList;
 	private Double[] ThroughputArray;
 	private ListIterator<String> plotPathListIt;
+	private ListIterator<String> simuPathListIt;
 	private ArrayList<String> plotPathList;
 	private Double[] ThroughputMeanArray;
 
@@ -59,30 +61,36 @@ public class PlotFileDeploy {
 			}
 	}
 
-	public Double[] getThroughputList(String file) {
-		File simuData = new File(file);
+	public Double[] getThroughputArray(ArrayList<String> simuPathList) {
+		ArrayList<Double> ThroughputTempList = new ArrayList<Double>();
+		Double [] ThroughputMeanAr;
 	    String line = "";
-	    ArrayList<Double> ThroughputTempList = new ArrayList<Double>();
-	    
-		try {
-			Scanner scanner = new Scanner(simuData);
-		    
-		    while (scanner.hasNextLine()) {
-		        line = scanner.nextLine();
-		        if(line.contains("Throughput")) {
-		        	line = line.replaceAll("\\s","");
-		        	ThroughputTempList.add(Double.parseDouble(line.substring(18)));   		
-		        }
-		    }
-		    ThroughputArray = ThroughputTempList.toArray(new Double[0]);
-		    
-		    return ThroughputMean(ThroughputArray);
-		    
-		} catch(FileNotFoundException e) { 
-			e.printStackTrace();
-		}
-		return null;
-	}
+	    simuPathListIt = simuPathList.listIterator();
+	    while(simuPathListIt.hasNext()) {
+	    	//System.out.println(simuPathListIt.next());
+	    	File simuData = new File(simuPathListIt.next());
+
+			try {
+				Scanner scanner = new Scanner(simuData);
+			    
+			    while (scanner.hasNextLine()) {
+			        line = scanner.nextLine();
+			        if(line.contains("Throughput")) {
+			        	line = line.replaceAll("\\s","").substring(18);
+			        	//System.out.println(line);
+			        	ThroughputTempList.add(Double.parseDouble(line));
+
+			        }
+			    }
+
+				} catch(FileNotFoundException e) { 
+					e.printStackTrace();
+				}
+			}
+	    ThroughputArray = ThroughputTempList.toArray(new Double[ThroughputTempList.size()]);
+	    ThroughputMeanAr = ThroughputMean(ThroughputArray);
+	    return ThroughputMeanAr;		
+}
 	
 	public ArrayList<String> getFilePath(String file) {
 		File filePath = new File(file);
@@ -141,26 +149,27 @@ public class PlotFileDeploy {
 	public void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
 		BufferedWriter bf = null;
 		int ThreadShift = 0;
+		int ChangeSet = 0;
 		
 		try {
 			plotPathListIt = plotPathList.listIterator();
 			while(plotPathListIt.hasNext()) {
 				File file = new File(plotPathListIt.next());
 				bf = new BufferedWriter( new FileWriter(file) );
-				
-				for(int i = 0; i < ThroughputMeanArray.length/4; i = i + threadOffset) {
+
 					for(Integer n : ThreadNum) { 
-						//     Thread                                                             // Update Ratio
-						bf.write(n + " " + ThroughputMeanArray[i + ThreadShift] 				  // 0 
-								   + " " + ThroughputMeanArray[i + ThreadShift + threadOffset]    // 10
-								   + " " + ThroughputMeanArray[i + ThreadShift + 2*threadOffset]);// 100
-						if(ThreadShift < threadOffset - 1)
+						//     Thread                                                                     // Update Ratio
+						bf.write(n + "\t" + ThroughputMeanArray[ChangeSet + ThreadShift]  				  // 0 
+								   + "\t " + ThroughputMeanArray[ChangeSet + ThreadShift + threadOffset]    // 10
+								   + "\t" + ThroughputMeanArray[ChangeSet + ThreadShift + 2*threadOffset]);// 100
+						if(ThreadShift++ < threadOffset - 1)
 							bf.newLine();
-						if(ThreadShift++ == threadOffset)
+						else {
 							ThreadShift = 0;
+							bf.flush();
+						}
 					}
-					bf.flush();
-				}	
+					ChangeSet += threadOffset*updateRatioNum;
 			}
         }catch(IOException e){
             e.printStackTrace();
@@ -169,23 +178,20 @@ public class PlotFileDeploy {
             try{
                 //always close the writer
                 bf.close();
+                System.out.println("Plot files deployed");
             }catch(Exception e){}
 		}
 	}
 	
 	public static void main(String[] args) {
 		PlotFileDeploy d = new PlotFileDeploy();
+		ArrayList<String> plotPath;
+		ArrayList<String> simuPath;
 		
-		ProcessBuilder pub = new ProcessBuilder("echo hello");
-		try {
-			pub.start();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		//d.generatePlotEnvironment();
+		plotPath = d.getFilePath("plotDataPath.txt");
+		simuPath = d.getFilePath("simuDataPath.txt");
 		
-		System.out.print("hello");
-		//System.out.print(d.getThroughputList("simuDataPath.txt"));
-		
+		Double[] pub = d.getThroughputArray(simuPath);
+		d.writeDataToPlotFiles(plotPath, pub);
 	}
 }
