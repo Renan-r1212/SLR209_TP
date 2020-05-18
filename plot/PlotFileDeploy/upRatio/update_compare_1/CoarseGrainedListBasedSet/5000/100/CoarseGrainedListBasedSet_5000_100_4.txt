@@ -16,28 +16,28 @@ Benchmark parameters
   WarmUp:                  	0 s
   Iterations:              	1
   Benchmark:               	linkedlists.lockbased.CoarseGrainedListBasedSet
+Thread #0 finished.
+Thread #3 finished.
 Thread #1 finished.
 Thread #2 finished.
-Thread #3 finished.
-Thread #0 finished.
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
   Average traversal length: 	NaN
   Struct Modifications:     	0
-  Throughput (ops/s):       	51887.1692461308
-  Elapsed time (s):         	2.003
-  Operations:               	103930	( 100 %)
-    effective updates:     	52076	( 50.11 %)
-    |--add successful:     	26016	( 25.03 %)
-    |--remove succ.:       	26060	( 25.07 %)
+  Throughput (ops/s):       	53715.069860279444
+  Elapsed time (s):         	2.004
+  Operations:               	107645	( 100 %)
+    effective updates:     	53598	( 49.79 %)
+    |--add successful:     	26778	( 24.88 %)
+    |--remove succ.:       	26820	( 24.92 %)
     |--addAll succ.:       	0	( 0.00 %)
     |--removeAll succ.:    	0	( 0.00 %)
     size successful:       	0	( 0.00 %)
     contains succ.:        	0	( 0.00 %)
-    unsuccessful ops:      	51854	( 49.89 %)
-  Final size:              	4956
-  Expected size:           	4956
+    unsuccessful ops:      	54047	( 50.21 %)
+  Final size:              	4958
+  Expected size:           	4958
 -------------------------------------------------------------------------------
 TM statistics
 -------------------------------------------------------------------------------

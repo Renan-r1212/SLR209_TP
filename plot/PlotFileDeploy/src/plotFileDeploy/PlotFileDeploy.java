@@ -180,7 +180,6 @@ public class PlotFileDeploy {
 		try {
 			pub.start();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		//d.generatePlotEnvironment();

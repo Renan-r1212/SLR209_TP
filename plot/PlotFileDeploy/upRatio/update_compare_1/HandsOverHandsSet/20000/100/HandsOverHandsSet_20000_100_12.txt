@@ -17,35 +17,35 @@ Benchmark parameters
   Iterations:              	1
   Benchmark:               	linkedlists.lockbased.HandsOverHandsSet
 Thread #9 finished.
-Thread #5 finished.
-Thread #11 finished.
-Thread #6 finished.
-Thread #0 finished.
+Thread #1 finished.
+Thread #8 finished.
 Thread #2 finished.
 Thread #10 finished.
+Thread #0 finished.
 Thread #4 finished.
 Thread #7 finished.
 Thread #3 finished.
-Thread #8 finished.
-Thread #1 finished.
+Thread #5 finished.
+Thread #11 finished.
+Thread #6 finished.
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
   Average traversal length: 	NaN
   Struct Modifications:     	0
-  Throughput (ops/s):       	29015.94419531639
-  Elapsed time (s):         	2.007
-  Operations:               	58235	( 100 %)
-    effective updates:     	29251	( 50.23 %)
-    |--add successful:     	14660	( 25.17 %)
-    |--remove succ.:       	14591	( 25.06 %)
+  Throughput (ops/s):       	29600.995024875625
+  Elapsed time (s):         	2.01
+  Operations:               	59498	( 100 %)
+    effective updates:     	29790	( 50.07 %)
+    |--add successful:     	14903	( 25.05 %)
+    |--remove succ.:       	14887	( 25.02 %)
     |--addAll succ.:       	0	( 0.00 %)
     |--removeAll succ.:    	0	( 0.00 %)
     size successful:       	0	( 0.00 %)
     contains succ.:        	0	( 0.00 %)
-    unsuccessful ops:      	28984	( 49.77 %)
-  Final size:              	20069
-  Expected size:           	20069
+    unsuccessful ops:      	29708	( 49.93 %)
+  Final size:              	20016
+  Expected size:           	20016
 -------------------------------------------------------------------------------
 TM statistics
 -------------------------------------------------------------------------------
