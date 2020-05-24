@@ -24,17 +24,19 @@ public class PlotFileDeploy {
 	private Integer[] listSizeList;
 	private Integer[] updateRatio;
 	private Integer[] ThreadNum;
-	private ArrayList<String> simuResultList;
 	private Double[] ThroughputArray;
-	private ListIterator<String> plotPathListIt;
-	private ListIterator<String> simuPathListIt;
+	private ArrayList<String> simuResultList;
 	private ArrayList<String> plotPathList;
+	private ArrayList<String> pathThroughputXupRatio;
+	private ArrayList<String> plotThroughputXupRatio;
 	private Double[] ThroughputMeanArray;
 
 	
 	public PlotFileDeploy() {
-		simuResultList = new ArrayList<String>();
-		plotPathList   = new ArrayList<String>();
+		simuResultList         = new ArrayList<String>();
+		plotPathList           = new ArrayList<String>();
+		pathThroughputXupRatio = new ArrayList<String>();
+		plotThroughputXupRatio = new ArrayList<String>();
 		pb = new ProcessBuilder("echo Environment deployed");
 				
 		algoList = new String[] {"CoarseGrainedListBasedSet",
@@ -52,45 +54,14 @@ public class PlotFileDeploy {
 	}
 	
 	public void generatePlotEnvironment() {
-			
-			try {
-				//pb = new ProcessBuilder("echo hello");
-				process = pb.start();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		
+		try {
+			//pb = new ProcessBuilder("echo hello");
+			process = pb.start();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
-	public Double[] getThroughputArray(ArrayList<String> simuPathList) {
-		ArrayList<Double> ThroughputTempList = new ArrayList<Double>();
-		Double [] ThroughputMeanAr;
-	    String line = "";
-	    simuPathListIt = simuPathList.listIterator();
-	    while(simuPathListIt.hasNext()) {
-	    	//System.out.println(simuPathListIt.next());
-	    	File simuData = new File(simuPathListIt.next());
-
-			try {
-				Scanner scanner = new Scanner(simuData);
-			    
-			    while (scanner.hasNextLine()) {
-			        line = scanner.nextLine();
-			        if(line.contains("Throughput")) {
-			        	line = line.replaceAll("\\s","").substring(18);
-			        	//System.out.println(line);
-			        	ThroughputTempList.add(Double.parseDouble(line));
-
-			        }
-			    }
-
-				} catch(FileNotFoundException e) { 
-					e.printStackTrace();
-				}
-			}
-	    ThroughputArray = ThroughputTempList.toArray(new Double[ThroughputTempList.size()]);
-	    ThroughputMeanAr = ThroughputMean(ThroughputArray);
-	    return ThroughputMeanAr;		
-}
 	
 	public ArrayList<String> getFilePath(String file) {
 		File filePath = new File(file);
@@ -121,8 +92,67 @@ public class PlotFileDeploy {
 			}
 			return plotPathList;
 	    }
+	    else if(file == "simuDataPath_throughputXupRatio.txt") {
+			try {
+				Scanner scanner = new Scanner(filePath);
+			   
+			    while (scanner.hasNextLine()) {
+			        line = scanner.nextLine();
+			        pathThroughputXupRatio.add(line);
+			    }
+			} catch(FileNotFoundException e) { 
+				e.printStackTrace();
+			}
+			return pathThroughputXupRatio;
+	    }
+	    else if(file == "plotDataPath_throughputXupRatio.txt") {
+			try {
+				Scanner scanner = new Scanner(filePath);
+			   
+			    while (scanner.hasNextLine()) {
+			        line = scanner.nextLine();
+			        plotThroughputXupRatio.add(line);
+			    }
+			} catch(FileNotFoundException e) { 
+				e.printStackTrace();
+			}
+			return plotThroughputXupRatio;
+	    }
 		return null;
 	}
+
+	public Double[] getThroughputArray(ArrayList<String> simuPathList) {
+		ArrayList<Double> ThroughputTempList = new ArrayList<Double>();
+		ListIterator<String> simuPathListIt = null;
+		Double [] ThroughputMeanAr;
+	    String line = "";
+	    simuPathListIt = simuPathList.listIterator();
+	    while(simuPathListIt.hasNext()) {
+	    	//System.out.println(simuPathListIt.next());
+	    	File simuData = new File(simuPathListIt.next());
+
+			try {
+				Scanner scanner = new Scanner(simuData);
+			    
+			    while (scanner.hasNextLine()) {
+			        line = scanner.nextLine();
+			        if(line.contains("Throughput")) {
+			        	line = line.replaceAll("\\s","").substring(18);
+			        	//System.out.println(line);
+			        	ThroughputTempList.add(Double.parseDouble(line));
+
+			        }
+			    }
+
+				} catch(FileNotFoundException e) { 
+					e.printStackTrace();
+				}
+			}
+	    ThroughputArray = ThroughputTempList.toArray(new Double[ThroughputTempList.size()]);
+	    ThroughputMeanAr = ThroughputMean(ThroughputArray);
+	    return ThroughputMeanAr;		
+	}
+	
 	
 	public Double[] ThroughputMean(Double[] ThroughputArray) {
 		final int oneSimuSize = ThroughputArray.length/numOfSimulations;
@@ -145,8 +175,9 @@ public class PlotFileDeploy {
 		}
 		return ThroughputMeanArray;
 	}
-
-	public void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+	
+	private void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+		ListIterator<String> plotPathListIt = null;
 		BufferedWriter bf = null;
 		int ThreadShift = 0;
 		int ChangeSet = 0;
