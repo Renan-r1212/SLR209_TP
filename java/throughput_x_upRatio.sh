@@ -36,7 +36,7 @@ do
  					for THREADS in 1 6 12
 					do
 						LIST_RANGE=$((LIST_SIZE * 2))
-						java -cp bin contention.benchmark.Test -b linkedlists.lockbased.$ALG -W 0 -d 2000 -t $THREADS -u $UPDATE_RATIO -i $LIST_SIZE -r $LIST_RANGE > $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$UPDATE_RATIO/$ALG"_"$LIST_SIZE"_"$UPDATE_RATIO"_"$THREADS".txt"
+						java -cp bin contention.benchmark.Test -b linkedlists.lockbased.$ALG -W 0 -d 2000 -t $THREADS -u $UPDATE_RATIO -i $LIST_SIZE -r $LIST_RANGE > $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$THREADS"_threads"/$ALG"_"$LIST_SIZE"_"$UPDATE_RATIO"_"$THREADS".txt"
 						echo $CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$THREADS"_threads"/$ALG"_"$LIST_SIZE"_"$UPDATE_RATIO"_"$THREADS".txt" >> $BASEPLOTPATH/$SIMUPATHFILE                    
                 done
             done
