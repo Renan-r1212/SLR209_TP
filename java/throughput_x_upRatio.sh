@@ -31,7 +31,7 @@ do
     do
 		for LIST_SIZE in 1000 8000
 		do
-	    	    for UPDATE_RATIO in {0..100..5}
+	    	    for UPDATE_RATIO in {0..100..2}
 	    	    do 
  					for THREADS in 1 6 12
 					do

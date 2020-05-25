@@ -1,4 +1,4 @@
-set terminal png size 600,700
+set terminal png size 800, 600
 
 set form y "%e"
 
@@ -209,24 +209,24 @@ plot "../plots/trees/CATreeMapAVL/plot_LISTSIZE_20000/plot.txt" using 1:2:xtic(1
 #CoarseGrainedListBasedSet
 
 #1000
-set output '../plots/graphs/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/1000_CoarseGrainedListBasedSet.png'
+set output '../plots/graphs/throughput_x_upratio_graphs/linkedlist/CoarseGrainedListBasedSet/1000_CoarseGrainedListBasedSet.png'
 set title "Performance Analysis-CoarseGrainedListBasedSet-LISTSIZE 1000"
-plot "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
+plot "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_1000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
 
 #8000
-set output '../plots/graphs/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/8000_CoarseGrainedListBasedSet.png'
+set output '../plots/graphs/throughput_x_upratio_graphs/linkedlist/CoarseGrainedListBasedSet/8000_CoarseGrainedListBasedSet.png'
 set title "Performance Analysis-CoarseGrainedListBasedSet-LISTSIZE 8000"
-plot "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
+plot "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio_plotFiles/linkedlist/CoarseGrainedListBasedSet/plot_LISTSIZE_8000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
 
 
 #HandsOverHandsSet
 
-#1000
-set output '../plots/graphs/throughput_x_upratio/linkedlist/HandsOverHandsSet/1000_HandsOverHandsSet.png'
+#1000       
+set output '../plots/graphs/throughput_x_upratio_graphs/linkedlist/HandsOverHandsSet/1000_HandsOverHandsSet.png'
 set title "Performance Analysis-HandsOverHandsSet-LISTSIZE 1000"
-plot "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
+plot "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_1000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
 
 #8000
-set output '../plots/graphs/throughput_x_upratio/linkedlist/HandsOverHandsSet/8000_HandsOverHandsSet.png'
+set output '../plots/graphs/throughput_x_upratio_graphs/linkedlist/HandsOverHandsSet/8000_HandsOverHandsSet.png'
 set title "Performance Analysis-HandsOverHandsSet-LISTSIZE 8000"
-plot "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 
+plot "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:2:xtic(1) title "0" with linespoints lt 7 lc 7, "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:3:xtic(1) title "10" with linespoints lt 5 lc 28, "../plots/throughput_x_upratio_plotFiles/linkedlist/HandsOverHandsSet/plot_LISTSIZE_8000/plot.txt" using 1:4:xtic(1) title "100" with linespoints lt 9 lc 6 

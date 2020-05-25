@@ -1,0 +1,76 @@
+package plotFileDeploy;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.ListIterator;
+
+public class ThroughputXupRatio {
+
+	private final int numOfSimulations = 5;
+	private final int threadOffset = 4;
+	private final int updateRatioNum = 3;
+	
+	private Integer[] ThreadNum;
+
+	public ThroughputXupRatio() {
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	public void test() {
+		ThreadNum = new Integer[51];
+		for(int i = 0; i <= 100; i = i + 2) {
+			ThreadNum[i] = i;
+		}
+		
+		for(int i = 0; i < ThreadNum.length; i++) {
+			System.out.print(ThreadNum[i]);
+		}
+	}
+	
+	
+	private void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+		ListIterator<String> plotPathListIt = null;
+		BufferedWriter bf = null;
+		int ThreadShift = 0;
+		int ChangeSet = 0;
+		
+		try {
+			plotPathListIt = plotPathList.listIterator();
+			while(plotPathListIt.hasNext()) {
+				File file = new File(plotPathListIt.next());
+				bf = new BufferedWriter( new FileWriter(file) );
+
+					for(Integer n : ThreadNum) { 
+						//     Thread                                                                     // Update Ratio
+						bf.write(n + "\t" + ThroughputMeanArray[ChangeSet + ThreadShift]  				  // 0 
+								   + "\t " + ThroughputMeanArray[ChangeSet + ThreadShift + threadOffset]    // 10
+								   + "\t" + ThroughputMeanArray[ChangeSet + ThreadShift + 2*threadOffset]);// 100
+						if(ThreadShift++ < threadOffset - 1)
+							bf.newLine();
+						else {
+							ThreadShift = 0;
+							bf.flush();
+						}
+					}
+					ChangeSet += threadOffset*updateRatioNum;
+			}
+        }catch(IOException e){
+            e.printStackTrace();
+        }finally{
+            
+            try{
+                //always close the writer
+                bf.close();
+                System.out.println("Plot files deployed");
+            }catch(Exception e){}
+		}
+	}
+}
