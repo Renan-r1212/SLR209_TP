@@ -9,13 +9,13 @@ rm -rf $BASEPLOTPATH/$CONTAINER $BASEPLOTPATH/$SIMUPATHFILE && mkdir $BASEPLOTPA
 for FILE in 1 2 3 4 5
 do
 	mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet LazySkipList CATreeMapAVL
+    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
     do
 		mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG
-		for LIST_SIZE in 1000 2000 5000 8000 10000 12000 15000 18000 20000
+		for LIST_SIZE in 1000 2000 5000 8000 10000 12000
 		do
 			mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE
-	    	for UPDATE_RATIO in 0 10 100
+	    	for UPDATE_RATIO in 0 10 25 50 100
 	    	do
 				mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$UPDATE_RATIO	
             done
@@ -26,16 +26,16 @@ done
 # Excutes simulations
 for FILE in 1 2 3 4 5
 do
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet LazySkipList CATreeMapAVL
+    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
     do
-		for LIST_SIZE in 1000 2000 5000 8000 10000 12000 15000 18000 20000
+		for LIST_SIZE in 1000 2000 5000 8000 10000 12000
 		do
-	    	    for UPDATE_RATIO in 0 10 100
+	    	    for UPDATE_RATIO in 0 10 25 50 100
 	    	    do 
- 					for THREADS in 1 4 8 12
+ 					for THREADS in 1 4 8 16 32
 					do
 						LIST_RANGE=$((LIST_SIZE * 2))
-                    	if [ $ALG == LazySkipList ]
+                    			if [ $ALG == LazySkipList ]
 		    			then
 							java -cp bin contention.benchmark.Test -b skiplists.lockbased.$ALG -W 0 -d 2000 -t $THREADS -u $UPDATE_RATIO -i $LIST_SIZE -r $LIST_RANGE > $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$UPDATE_RATIO/$ALG"_"$LIST_SIZE"_"$UPDATE_RATIO"_"$THREADS".txt"
 		    			elif [ $ALG == CATreeMapAVL ]
