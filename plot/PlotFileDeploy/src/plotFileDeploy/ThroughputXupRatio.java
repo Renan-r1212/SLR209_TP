@@ -35,17 +35,17 @@ public class ThroughputXupRatio {
 		simuPath = d.getFilePath("simuDataPath_throughputXupRatio_JIT-on.txt");
 		pub = d.getThroughputArray(simuPath);
 		System.out.println("JIT-ON");
-		a.writeDataToPlotFiles(plotPath, pub);
+		a.writeDataToPlotFiles_upratio(plotPath, pub);
 		
 		plotPath = d.getFilePath("plotDataPath_throughputXupRatio_JIT-off.txt");
 		simuPath = d.getFilePath("simuDataPath_throughputXupRatio_JIT-off.txt");
 		pub = d.getThroughputArray(simuPath);
 		System.out.println("JIT-OFF");
-		a.writeDataToPlotFiles(plotPath, pub);
+		a.writeDataToPlotFiles_upratio(plotPath, pub);
 	}
 	
 	
-	private void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+	void writeDataToPlotFiles_upratio(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
 		ListIterator<String> plotPathListIt = null;
 		BufferedWriter bf = null;
 		int upRatioShift = 0;

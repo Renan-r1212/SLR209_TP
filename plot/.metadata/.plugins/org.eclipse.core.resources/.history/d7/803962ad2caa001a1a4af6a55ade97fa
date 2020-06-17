@@ -1,0 +1,19 @@
+package plotFileDeploy;
+
+import java.util.ArrayList;
+
+public class ThroughputxupRatio_C {
+
+	public static void main(String[] args) {
+		ThroughputxThread_C b = new ThroughputxThread_C();
+		ThroughputXupRatio c = new ThroughputXupRatio();
+		PlotFileDeploy d = new PlotFileDeploy();
+		Double [] pub;
+		ArrayList<String> plotPath;
+		
+		plotPath = d.getFilePath("C_plotDataPath_throughputXupRatio.txt");
+		pub = b.getCThroughputArray(b.getLogFilePath("clog_throughputXupRatio"));
+		c.writeDataToPlotFiles_upratio(plotPath, pub);
+	}
+
+}

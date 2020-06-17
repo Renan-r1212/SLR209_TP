@@ -1,0 +1,35 @@
+package plotFileDeploy;
+
+import java.util.ArrayList;
+
+public class ThroughputxupRatio_C {
+	
+	private static Integer[] iterations;
+	private static Integer[] updateRatio;
+	private static Integer[] threds;
+	
+	public ThroughputxupRatio_C() {
+		iterations = new Integer[] {1, 2, 3, 4, 5};
+		threds = new Integer[] {1, 2, 4, 8, 16, 32};
+		
+		updateRatio = new Integer[21];
+		int count = 0;
+			for(int j = 0; j <= 100; j += 5) {
+				updateRatio[count] = j;
+				count++;
+			}
+	}
+	public static void main(String[] args) {
+		ThroughputxThread_C b = new ThroughputxThread_C();
+		ThroughputXupRatio c = new ThroughputXupRatio();
+		PlotFileDeploy d = new PlotFileDeploy();
+		Double [] pub;
+		ArrayList<String> plotPath;
+		for(int i=0; i< updateRatio.length; i++)
+		System.out.println(updateRatio);
+		//plotPath = d.getFilePath("C_plotDataPath_throughputXupRatio.txt");
+		//pub = b.getCThroughputArray(b.getLogFilePath("clog_throughputXupRatio", iterations, updateRatio, threds));
+		//c.writeDataToPlotFiles_upratio(plotPath, pub);
+	}
+
+}

@@ -1,0 +1,30 @@
+package plotFileDeploy;
+
+import java.util.ArrayList;
+
+public class ThroughputxThread_C {
+	private ArrayList<String> cLogPath;
+	private Integer[] iterations;
+	
+	public ThroughputxThread_C() {
+		cLogPath = new ArrayList<String>(); 
+		
+		iterations = new Integer[] {1, 2, 3, 4, 5};
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		ThroughputxThread_C b = new ThroughputxThread_C();
+
+	}
+	
+	public ArrayList<String> getLogFilePath(String file) {
+		
+		
+		
+		return null;
+	}
+
+}

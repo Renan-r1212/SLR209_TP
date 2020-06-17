@@ -49,6 +49,24 @@ public class PlotFileDeploy {
 		ThreadNum 	= new Integer[] {1, 2, 4, 8, 16, 32};
 	}
 	
+	public static void main(String[] args) {
+		PlotFileDeploy d = new PlotFileDeploy();
+		ArrayList<String> plotPath;
+		ArrayList<String> simuPath;
+		Double[] pub;
+		
+		plotPath = d.getFilePath("plotDataPath_throughputXthreads_JIT-off.txt");
+		simuPath = d.getFilePath("simuDataPath_JIT-off.txt");
+		pub = d.getThroughputArray(simuPath);
+		d.writeDataToPlotFiles_thread(plotPath, pub);
+		
+		plotPath = d.getFilePath("plotDataPath_throughputXthreads_JIT-on.txt");
+		simuPath = d.getFilePath("simuDataPath_JIT-on.txt");
+		pub = d.getThroughputArray(simuPath);
+		d.writeDataToPlotFiles_thread(plotPath, pub);
+		
+	}
+	
 	public void generatePlotEnvironment() {
 		
 		try {
@@ -135,7 +153,7 @@ public class PlotFileDeploy {
 		return ThroughputMeanArray;
 	}
 	
-	private void writeDataToPlotFiles(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+	void writeDataToPlotFiles_thread(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
 		ListIterator<String> plotPathListIt = null;
 		BufferedWriter bf = null;
 		int ThreadShift = 0;
@@ -172,23 +190,5 @@ public class PlotFileDeploy {
                 System.out.println("Plot files deployed");
             }catch(Exception e){}
 		}
-	}
-	
-	public static void main(String[] args) {
-		PlotFileDeploy d = new PlotFileDeploy();
-		ArrayList<String> plotPath;
-		ArrayList<String> simuPath;
-		Double[] pub;
-		
-		plotPath = d.getFilePath("plotDataPath_throughputXthreads_JIT-off.txt");
-		simuPath = d.getFilePath("simuDataPath_JIT-off.txt");
-		pub = d.getThroughputArray(simuPath);
-		d.writeDataToPlotFiles(plotPath, pub);
-		
-		plotPath = d.getFilePath("plotDataPath_throughputXthreads_JIT-on.txt");
-		simuPath = d.getFilePath("simuDataPath_JIT-on.txt");
-		pub = d.getThroughputArray(simuPath);
-		d.writeDataToPlotFiles(plotPath, pub);
-		
 	}
 }
