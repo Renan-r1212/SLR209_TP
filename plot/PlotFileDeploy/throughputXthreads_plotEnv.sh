@@ -18,7 +18,7 @@ do
     for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
     do
         mkdir $BASEPLOTPATH/$DATACONTAINER/$JIT/$ALG
-        for LIST_SIZE in 1000 8000
+        for LIST_SIZE in 100 500
         do        
             mkdir $BASEPLOTPATH/$DATACONTAINER/$JIT/$ALG/plot_LISTSIZE_$LIST_SIZE && touch $BASEPLOTPATH/$DATACONTAINER/$JIT/$ALG/plot_LISTSIZE_$LIST_SIZE/plot.txt
             if [ $JIT == JIT-on ]
