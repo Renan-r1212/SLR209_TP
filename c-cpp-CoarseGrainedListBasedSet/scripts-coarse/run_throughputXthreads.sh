@@ -17,9 +17,9 @@ benchs="MUTEX-hoh-list"
 #iterations="1 2 3 4 5 6 7 8 9 10"
 iterations="1 2 3 4 5"
 #updates="0 100"
-updates="0 10 25 75 100"
+updates="0 10 100"
 #size="1024 4096 8192 16384 32768 65536"
-sizes="1000"
+sizes="100 1000"
 #deqbenchs="estm-dq tcmalloc-estm-dq tcmalloc-sequential-dq"
 ###
 
