@@ -1,0 +1,542 @@
+Set type     : linked list
+Length       : 5000
+Initial size : 1000
+Nb threads   : 32
+Value range  : 2000
+Seed         : 0
+Update rate  : 60
+Lock alg     : 1
+Alternate    : 0
+Effective    : 0
+Type sizes   : int=4/long=8/ptr=8/word=8
+Initializing STM
+Adding 1000 entries to set
+Set size     : 1000
+Creating thread 0
+Creating thread 1
+Creating thread 2
+Creating thread 3
+Creating thread 4
+Creating thread 5
+Creating thread 6
+Creating thread 7
+Creating thread 8
+Creating thread 9
+Creating thread 10
+Creating thread 11
+Creating thread 12
+Creating thread 13
+Creating thread 14
+Creating thread 15
+Creating thread 16
+Creating thread 17
+Creating thread 18
+Creating thread 19
+Creating thread 20
+Creating thread 21
+Creating thread 22
+Creating thread 23
+Creating thread 24
+Creating thread 25
+Creating thread 26
+Creating thread 27
+Creating thread 28
+Creating thread 29
+Creating thread 30
+Creating thread 31
+STARTING...
+STOPPING...
+Thread 0
+  #add        : 14829
+    #added    : 7334
+  #remove     : 14520
+    #removed  : 7333
+  #contains   : 19517
+  #found      : 9810
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 1
+  #add        : 11602
+    #added    : 5776
+  #remove     : 11357
+    #removed  : 5775
+  #contains   : 15123
+  #found      : 7737
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 2
+  #add        : 10946
+    #added    : 5384
+  #remove     : 10566
+    #removed  : 5383
+  #contains   : 14309
+  #found      : 7281
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 3
+  #add        : 19543
+    #added    : 9608
+  #remove     : 18859
+    #removed  : 9607
+  #contains   : 25275
+  #found      : 12639
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 4
+  #add        : 10091
+    #added    : 4904
+  #remove     : 9508
+    #removed  : 4903
+  #contains   : 13008
+  #found      : 6552
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 5
+  #add        : 14972
+    #added    : 7359
+  #remove     : 14567
+    #removed  : 7359
+  #contains   : 19596
+  #found      : 10022
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 6
+  #add        : 14410
+    #added    : 7124
+  #remove     : 13909
+    #removed  : 7123
+  #contains   : 19182
+  #found      : 9884
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 7
+  #add        : 17574
+    #added    : 8663
+  #remove     : 17219
+    #removed  : 8663
+  #contains   : 22838
+  #found      : 11648
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 8
+  #add        : 21621
+    #added    : 10640
+  #remove     : 21207
+    #removed  : 10640
+  #contains   : 28767
+  #found      : 14605
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 9
+  #add        : 15265
+    #added    : 7494
+  #remove     : 14683
+    #removed  : 7494
+  #contains   : 20078
+  #found      : 10174
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 10
+  #add        : 14418
+    #added    : 6984
+  #remove     : 13976
+    #removed  : 6983
+  #contains   : 18395
+  #found      : 9366
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 11
+  #add        : 14636
+    #added    : 7222
+  #remove     : 14211
+    #removed  : 7221
+  #contains   : 19024
+  #found      : 9571
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 12
+  #add        : 15919
+    #added    : 7860
+  #remove     : 15348
+    #removed  : 7859
+  #contains   : 21159
+  #found      : 10735
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 13
+  #add        : 15131
+    #added    : 7358
+  #remove     : 14292
+    #removed  : 7358
+  #contains   : 19893
+  #found      : 10038
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 14
+  #add        : 15350
+    #added    : 7581
+  #remove     : 14927
+    #removed  : 7580
+  #contains   : 20198
+  #found      : 10356
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 15
+  #add        : 11595
+    #added    : 5765
+  #remove     : 11445
+    #removed  : 5765
+  #contains   : 15485
+  #found      : 7830
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 16
+  #add        : 11676
+    #added    : 5662
+  #remove     : 11255
+    #removed  : 5662
+  #contains   : 15377
+  #found      : 7829
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 17
+  #add        : 10641
+    #added    : 5267
+  #remove     : 10357
+    #removed  : 5266
+  #contains   : 13718
+  #found      : 6902
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 18
+  #add        : 16865
+    #added    : 8271
+  #remove     : 16514
+    #removed  : 8270
+  #contains   : 22414
+  #found      : 11531
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 19
+  #add        : 13511
+    #added    : 6683
+  #remove     : 13142
+    #removed  : 6683
+  #contains   : 17601
+  #found      : 8889
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 20
+  #add        : 8776
+    #added    : 4356
+  #remove     : 8636
+    #removed  : 4355
+  #contains   : 11767
+  #found      : 6028
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 21
+  #add        : 9811
+    #added    : 4875
+  #remove     : 9534
+    #removed  : 4874
+  #contains   : 12763
+  #found      : 6406
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 22
+  #add        : 14039
+    #added    : 6895
+  #remove     : 13575
+    #removed  : 6895
+  #contains   : 18149
+  #found      : 9214
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 23
+  #add        : 14926
+    #added    : 7234
+  #remove     : 14056
+    #removed  : 7233
+  #contains   : 19489
+  #found      : 9899
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 24
+  #add        : 15293
+    #added    : 7565
+  #remove     : 14812
+    #removed  : 7564
+  #contains   : 20094
+  #found      : 10139
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 25
+  #add        : 10477
+    #added    : 5115
+  #remove     : 10170
+    #removed  : 5114
+  #contains   : 13714
+  #found      : 6956
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 26
+  #add        : 17885
+    #added    : 8831
+  #remove     : 17325
+    #removed  : 8830
+  #contains   : 23598
+  #found      : 12090
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 27
+  #add        : 15502
+    #added    : 7676
+  #remove     : 15199
+    #removed  : 7675
+  #contains   : 20466
+  #found      : 10356
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 28
+  #add        : 14662
+    #added    : 7088
+  #remove     : 13888
+    #removed  : 7087
+  #contains   : 18893
+  #found      : 9637
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 29
+  #add        : 15683
+    #added    : 7811
+  #remove     : 15242
+    #removed  : 7811
+  #contains   : 20556
+  #found      : 10387
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 30
+  #add        : 13605
+    #added    : 6719
+  #remove     : 13221
+    #removed  : 6718
+  #contains   : 17842
+  #found      : 9049
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 31
+  #add        : 15183
+    #added    : 7449
+  #remove     : 14584
+    #removed  : 7448
+  #contains   : 20034
+  #found      : 10224
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Set size      : 1022 (expected: 1022)
+Duration      : 5000 (ms)
+#txs          : 1496863 (299372.600000 / s)
+#read txs     : 598322 (119664.400000 / s)
+#eff. upd rate: 30.001677 
+#update txs   : 898541 (179708.200000 / s)
+#aborts       : 0 (0.000000 / s)
+  #lock-r     : 0 (0.000000 / s)
+  #lock-w     : 0 (0.000000 / s)
+  #val-r      : 0 (0.000000 / s)
+  #val-w      : 0 (0.000000 / s)
+  #val-c      : 0 (0.000000 / s)
+  #inv-mem    : 0 (0.000000 / s)
+Max retries   : 0
