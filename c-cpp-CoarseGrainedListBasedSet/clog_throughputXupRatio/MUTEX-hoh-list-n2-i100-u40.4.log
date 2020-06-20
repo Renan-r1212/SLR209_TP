@@ -1,0 +1,62 @@
+Set type     : linked list
+Length       : 5000
+Initial size : 100
+Nb threads   : 2
+Value range  : 200
+Seed         : 0
+Update rate  : 40
+Lock alg     : 1
+Alternate    : 0
+Effective    : 0
+Type sizes   : int=4/long=8/ptr=8/word=8
+Initializing STM
+Adding 100 entries to set
+Set size     : 100
+Creating thread 0
+Creating thread 1
+STARTING...
+STOPPING...
+Thread 0
+  #add        : 889230
+    #added    : 442468
+  #remove     : 871791
+    #removed  : 442468
+  #contains   : 2638467
+  #found      : 1332406
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 1
+  #add        : 970380
+    #added    : 483197
+  #remove     : 953463
+    #removed  : 483196
+  #contains   : 2885989
+  #found      : 1457097
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Set size      : 101 (expected: 101)
+Duration      : 5000 (ms)
+#txs          : 9209320 (1841864.000000 / s)
+#read txs     : 5524456 (1104891.200000 / s)
+#eff. upd rate: 20.102776 
+#update txs   : 3684864 (736972.800000 / s)
+#aborts       : 0 (0.000000 / s)
+  #lock-r     : 0 (0.000000 / s)
+  #lock-w     : 0 (0.000000 / s)
+  #val-r      : 0 (0.000000 / s)
+  #val-w      : 0 (0.000000 / s)
+  #val-c      : 0 (0.000000 / s)
+  #inv-mem    : 0 (0.000000 / s)
+Max retries   : 0
