@@ -1,0 +1,94 @@
+Set type     : linked list
+Length       : 5000
+Initial size : 100
+Nb threads   : 4
+Value range  : 200
+Seed         : 0
+Update rate  : 10
+Lock alg     : 1
+Alternate    : 0
+Effective    : 0
+Type sizes   : int=4/long=8/ptr=8/word=8
+Initializing STM
+Adding 100 entries to set
+Set size     : 100
+Creating thread 0
+Creating thread 1
+Creating thread 2
+Creating thread 3
+STARTING...
+STOPPING...
+Thread 0
+  #add        : 89265
+    #added    : 43842
+  #remove     : 85762
+    #removed  : 43841
+  #contains   : 1573700
+  #found      : 801554
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 1
+  #add        : 58894
+    #added    : 28690
+  #remove     : 56071
+    #removed  : 28689
+  #contains   : 1034115
+  #found      : 526735
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 2
+  #add        : 94678
+    #added    : 46593
+  #remove     : 90949
+    #removed  : 46592
+  #contains   : 1676923
+  #found      : 854536
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 3
+  #add        : 58699
+    #added    : 28875
+  #remove     : 56258
+    #removed  : 28875
+  #contains   : 1035070
+  #found      : 527436
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Set size      : 103 (expected: 103)
+Duration      : 5000 (ms)
+#txs          : 5910384 (1182076.800000 / s)
+#read txs     : 5319808 (1063961.600000 / s)
+#eff. upd rate: 5.008084 
+#update txs   : 590576 (118115.200000 / s)
+#aborts       : 0 (0.000000 / s)
+  #lock-r     : 0 (0.000000 / s)
+  #lock-w     : 0 (0.000000 / s)
+  #val-r      : 0 (0.000000 / s)
+  #val-w      : 0 (0.000000 / s)
+  #val-c      : 0 (0.000000 / s)
+  #inv-mem    : 0 (0.000000 / s)
+Max retries   : 0

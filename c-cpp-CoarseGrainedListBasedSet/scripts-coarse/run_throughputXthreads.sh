@@ -11,7 +11,7 @@
 # Select appropriate parameters below
 #
 #threads="1 4 8 12 16 20 24 28 32"
-threads="1 4 8 12"
+threads="1 2 4 8 16"
 #benchs="tcmalloc-lockfree-ll tcmalloc-spinlock-ht tcmalloc-estm-rt tcmalloc-estm-sl tcmalloc-fraser-sl tcmalloc-rotating-sl tcmalloc-spinlock-ll tcmalloc-estm-ll tcmalloc-estm-st tcmalloc-lockfree-ht tcmalloc-spinlock-sl tcmalloc-estm-ht tcmalloc-spinlock-btree"
 benchs="MUTEX-hoh-list"
 #iterations="1 2 3 4 5 6 7 8 9 10"
@@ -19,7 +19,7 @@ iterations="1 2 3 4 5"
 #updates="0 100"
 updates="0 10 100"
 #size="1024 4096 8192 16384 32768 65536"
-sizes="100 1000"
+sizes="100 1000 8000"
 #deqbenchs="estm-dq tcmalloc-estm-dq tcmalloc-sequential-dq"
 ###
 
@@ -30,8 +30,8 @@ echo "LD_PATH:" $LD_LIBRARY_PATH
 # path to binaries
 bin=../bin
 
-if [ ! -d "../log" ]; then
-	mkdir ../log
+if [ ! -d "../clog_throughputXthread" ]; then
+	mkdir ../clog_throughputXthread
 fi
 
 for size in ${sizes}
@@ -46,7 +46,7 @@ do
   do
    for bench in ${benchs}
    do 
-     ${bin}/${bench} -u ${upd} -i ${size} -r ${r} -d 5000 -t ${thread} -f 0 > ../log/${bench}-n${thread}-i${size}-u${upd}.${iter}.log
+     ${bin}/${bench} -u ${upd} -i ${size} -r ${r} -d 5000 -t ${thread} -f 0 > ../clog_throughputXthread/${bench}-n${thread}-i${size}-u${upd}.${iter}.log
    done
    echo "Done experimenting concurrent benchs for 5000 milliseconds each"
   done

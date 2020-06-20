@@ -19,7 +19,7 @@ iterations="1 2 3 4 5"
 #updates="0 100"
 updates="0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 100"
 #size="1024 4096 8192 16384 32768 65536"
-sizes="1000"
+sizes="100 1000 8000"
 #deqbenchs="estm-dq tcmalloc-estm-dq tcmalloc-sequential-dq"
 ###
 
@@ -30,8 +30,8 @@ echo "LD_PATH:" $LD_LIBRARY_PATH
 # path to binaries
 bin=../bin
 
-if [ ! -d "../log" ]; then
-	mkdir ../log
+if [ ! -d "../clog_throughputXupRatio" ]; then
+	mkdir ../clog_throughputXupRatio
 fi
 
 for size in ${sizes}
@@ -46,7 +46,7 @@ do
   do
    for bench in ${benchs}
    do 
-     ${bin}/${bench} -u ${upd} -i ${size} -r ${r} -d 5000 -t ${thread} -f 0 > ../log/${bench}-n${thread}-i${size}-u${upd}.${iter}.log
+     ${bin}/${bench} -u ${upd} -i ${size} -r ${r} -d 5000 -t ${thread} -f 0 > ../clog_throughputXupRatio/${bench}-n${thread}-i${size}-u${upd}.${iter}.log
    done
    echo "Done experimenting concurrent benchs for 5000 milliseconds each"
   done

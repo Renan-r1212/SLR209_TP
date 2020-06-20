@@ -42,7 +42,7 @@ public class PlotFileDeploy {
 		
 		Container = new String[] {"linkedlist"};
 		
-		listSizeList = new Integer[] {1000, 8000};
+		listSizeList = new Integer[] {100, 500};
 		
 		updateRatio = new Integer[] {0, 10, 25, 75, 100};
 		
@@ -89,6 +89,7 @@ public class PlotFileDeploy {
 			        //System.out.println(line);
 			        resultList.add(line);
 			    }
+			    scanner.close();
 			} catch(FileNotFoundException e) { 
 				e.printStackTrace();
 			}
@@ -153,7 +154,7 @@ public class PlotFileDeploy {
 		return ThroughputMeanArray;
 	}
 	
-	void writeDataToPlotFiles_thread(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
+	private void writeDataToPlotFiles_thread(ArrayList<String> plotPathList, Double[] ThroughputMeanArray) {
 		ListIterator<String> plotPathListIt = null;
 		BufferedWriter bf = null;
 		int ThreadShift = 0;
