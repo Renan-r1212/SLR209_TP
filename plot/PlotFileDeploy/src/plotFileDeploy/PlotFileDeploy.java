@@ -60,11 +60,12 @@ public class PlotFileDeploy {
 		pub = d.getThroughputArray(simuPath);
 		d.writeDataToPlotFiles_thread(plotPath, pub);
 		
+		/*
 		plotPath = d.getFilePath("plotDataPath_throughputXthreads_JIT-on.txt");
 		simuPath = d.getFilePath("simuDataPath_JIT-on.txt");
 		pub = d.getThroughputArray(simuPath);
 		d.writeDataToPlotFiles_thread(plotPath, pub);
-		
+		*/
 	}
 	
 	public void generatePlotEnvironment() {

@@ -12,7 +12,7 @@ do
     for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
     do
 		mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG
-		for LIST_SIZE in 100 500
+		for LIST_SIZE in 100
 		do
             mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE
             for THREADS in 1 2 4 8 16 32
@@ -29,7 +29,7 @@ for FILE in 1 2 3 4 5
 do
     for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
     do
-		for LIST_SIZE in 100 500
+		for LIST_SIZE in 100
 		do
 	    	    for UPDATE_RATIO in {0..100..5}
 	    	    do 

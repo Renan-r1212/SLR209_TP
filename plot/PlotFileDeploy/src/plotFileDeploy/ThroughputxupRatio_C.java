@@ -12,7 +12,7 @@ public class ThroughputxupRatio_C {
 	public ThroughputxupRatio_C() {
 		iterations = new Integer[] {1, 2, 3, 4, 5};
 		threds = new Integer[] {1, 2, 4, 8, 16, 32};
-		listSize = new Integer[] {100, 500};
+		listSize = new Integer[] {100, 1000, 8000};
 		updateRatio = new Integer[] {0 , 5,  10, 15, 20,
 									 25, 30, 35, 40, 45,
 									 50, 55, 60, 65, 70,

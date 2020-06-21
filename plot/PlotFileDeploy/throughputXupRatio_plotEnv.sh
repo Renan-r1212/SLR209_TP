@@ -57,7 +57,7 @@ done
 for DATACONTAINER in linkedlist
 do 
     mkdir $BASEPLOTPATH/$CPLOTCONTAINER/$DATACONTAINER
-    for ALG in HandsOverHandsSet
+    for ALG in CoarseGrainedListBasedSet
     do
         mkdir $BASEPLOTPATH/$CPLOTCONTAINER/$DATACONTAINER/$ALG
         for LIST_SIZE in 100 1000 8000
@@ -73,7 +73,7 @@ done
 for DATACONTAINER in linkedlist
 do 
     mkdir $BASEGRAPHPATH/$CGRAPHSCONTAINER/$DATACONTAINER
-    for ALG in HandsOverHandsSet
+    for ALG in CoarseGrainedListBasedSet
     do
         mkdir $BASEGRAPHPATH/$CGRAPHSCONTAINER/$DATACONTAINER/$ALG && echo $BASEGRAPHPATH/$CGRAPHSCONTAINER/$DATACONTAINER/$ALG/ >> $CPLOTGRAPHPATH
     done

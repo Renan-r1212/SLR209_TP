@@ -34,7 +34,7 @@ do
  					for THREADS in 1 2 4 8 16 32
 					do
 						LIST_RANGE=$((LIST_SIZE * 2))
-                    			if [ $ALG == LazySkipList ]
+                    	if [ $ALG == LazySkipList ]
 		    			then
 							java -Djava.compiler=NONE -cp bin contention.benchmark.Test -b skiplists.lockbased.$ALG -W 0 -d 2000 -t $THREADS -u $UPDATE_RATIO -i $LIST_SIZE -r $LIST_RANGE > $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$UPDATE_RATIO/$ALG"_"$LIST_SIZE"_"$UPDATE_RATIO"_"$THREADS".txt"
 		    			elif [ $ALG == CATreeMapAVL ]

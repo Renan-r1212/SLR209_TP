@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class ThroughputxThread_C {
 	private final int numOfSimulations = 5;
-	private final int threadOffset = 4;
+	private final int threadOffset = 5;
 	private final int updateRatioNum = 3;
 		
 	private static Integer[] iterations;
@@ -25,8 +25,8 @@ public class ThroughputxThread_C {
 		
 		iterations = new Integer[] {1, 2, 3, 4, 5};
 		updateRatio = new Integer[] {0, 10, 100};
-		threds = new Integer[] {1, 4, 8, 12};
-		listSize = new Integer[] {100, 1000};
+		threds = new Integer[] {1, 2, 4, 8, 16};
+		listSize = new Integer[] {100, 1000, 8000};
 		
 		
 	}
