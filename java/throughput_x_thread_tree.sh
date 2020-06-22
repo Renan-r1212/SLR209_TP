@@ -8,10 +8,10 @@ rm -rf $BASEPLOTPATH/$CONTAINER $BASEPLOTPATH/$SIMUPATHFILE && mkdir $BASEPLOTPA
 for FILE in 1 2 3 4 5
 do
     mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet CATreeMapAVL LazySkipList
+    for ALG in CATreeMapAVL
     do
 		mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG
-		for LIST_SIZE in 100 500 1000 5000 8000 12000
+		for LIST_SIZE in 1000 5000 8000 12000
 		do
 			mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE
 		    	for UPDATE_RATIO in 0 10 100
@@ -25,9 +25,9 @@ done
 # Excutes simulations
 for FILE in 1 2 3 4 5
 do
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet CATreeMapAVL LazySkipList
+    for ALG in CATreeMapAVL
     do
-		for LIST_SIZE in 100 500 1000 5000 8000 12000 20000
+		for LIST_SIZE in 1000 5000 8000 12000
 		do
 	    	    for UPDATE_RATIO in 0 10 100
 	    	    do 
