@@ -16,28 +16,28 @@ Benchmark parameters
   WarmUp:                  	0 s
   Iterations:              	1
   Benchmark:               	trees.lockbased.CATreeMapAVL
-Thread #3 finished.
 Thread #2 finished.
-Thread #1 finished.
 Thread #0 finished.
+Thread #3 finished.
+Thread #1 finished.
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
   Average traversal length: 	NaN
   Struct Modifications:     	0
-  Throughput (ops/s):       	3956299.5325422506
-  Elapsed time (s):         	2.781
-  Operations:               	11002469	( 100 %)
-    effective updates:     	5500422	( 49.99 %)
-    |--add successful:     	2750217	( 25.00 %)
-    |--remove succ.:       	2750205	( 25.00 %)
+  Throughput (ops/s):       	4950053.518334986
+  Elapsed time (s):         	2.018
+  Operations:               	9989208	( 100 %)
+    effective updates:     	4992933	( 49.98 %)
+    |--add successful:     	2496465	( 24.99 %)
+    |--remove succ.:       	2496468	( 24.99 %)
     |--addAll succ.:       	0	( 0.00 %)
     |--removeAll succ.:    	0	( 0.00 %)
     size successful:       	0	( 0.00 %)
     contains succ.:        	0	( 0.00 %)
-    unsuccessful ops:      	5502047	( 50.01 %)
-  Final size:              	1012
-  Expected size:           	1012
+    unsuccessful ops:      	4996275	( 50.02 %)
+  Final size:              	997
+  Expected size:           	997
 -------------------------------------------------------------------------------
 TM statistics
 -------------------------------------------------------------------------------
