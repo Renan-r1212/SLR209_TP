@@ -23,12 +23,12 @@ Creating thread 7
 STARTING...
 STOPPING...
 Thread 0
-  #add        : 4100
-    #added    : 2053
-  #remove     : 4105
-    #removed  : 2053
-  #contains   : 2097
-  #found      : 1012
+  #add        : 2386
+    #added    : 1200
+  #remove     : 2389
+    #removed  : 1200
+  #contains   : 1210
+  #found      : 595
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -38,12 +38,12 @@ Thread 0
     #inv-mem  : 0
   Max retries : 0
 Thread 1
-  #add        : 3857
-    #added    : 1943
-  #remove     : 3939
-    #removed  : 1942
-  #contains   : 1990
-  #found      : 988
+  #add        : 2510
+    #added    : 1197
+  #remove     : 2374
+    #removed  : 1197
+  #contains   : 1154
+  #found      : 571
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -53,12 +53,12 @@ Thread 1
     #inv-mem  : 0
   Max retries : 0
 Thread 2
-  #add        : 4358
-    #added    : 2247
-  #remove     : 4504
-    #removed  : 2246
-  #contains   : 2098
-  #found      : 1014
+  #add        : 2064
+    #added    : 1053
+  #remove     : 2089
+    #removed  : 1052
+  #contains   : 1054
+  #found      : 552
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -68,12 +68,12 @@ Thread 2
     #inv-mem  : 0
   Max retries : 0
 Thread 3
-  #add        : 3882
-    #added    : 1957
-  #remove     : 3871
-    #removed  : 1957
-  #contains   : 1849
-  #found      : 916
+  #add        : 2023
+    #added    : 997
+  #remove     : 1905
+    #removed  : 997
+  #contains   : 950
+  #found      : 450
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -83,12 +83,12 @@ Thread 3
     #inv-mem  : 0
   Max retries : 0
 Thread 4
-  #add        : 4213
-    #added    : 2053
-  #remove     : 4140
-    #removed  : 2053
-  #contains   : 1989
-  #found      : 988
+  #add        : 1884
+    #added    : 935
+  #remove     : 1818
+    #removed  : 934
+  #contains   : 950
+  #found      : 480
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -98,12 +98,12 @@ Thread 4
     #inv-mem  : 0
   Max retries : 0
 Thread 5
-  #add        : 4289
-    #added    : 2098
-  #remove     : 4151
-    #removed  : 2098
-  #contains   : 2103
-  #found      : 1068
+  #add        : 1639
+    #added    : 844
+  #remove     : 1774
+    #removed  : 844
+  #contains   : 917
+  #found      : 443
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -113,12 +113,12 @@ Thread 5
     #inv-mem  : 0
   Max retries : 0
 Thread 6
-  #add        : 4635
-    #added    : 2331
-  #remove     : 4548
-    #removed  : 2331
-  #contains   : 2310
-  #found      : 1160
+  #add        : 1604
+    #added    : 851
+  #remove     : 1757
+    #removed  : 851
+  #contains   : 848
+  #found      : 410
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -128,12 +128,12 @@ Thread 6
     #inv-mem  : 0
   Max retries : 0
 Thread 7
-  #add        : 4041
-    #added    : 2074
-  #remove     : 4084
-    #removed  : 2073
-  #contains   : 2065
-  #found      : 1039
+  #add        : 2429
+    #added    : 1213
+  #remove     : 2503
+    #removed  : 1212
+  #contains   : 1186
+  #found      : 578
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -143,11 +143,11 @@ Thread 7
     #inv-mem  : 0
   Max retries : 0
 Set size      : 8003 (expected: 8003)
-Duration      : 5000 (ms)
-#txs          : 83218 (16643.600000 / s)
-#read txs     : 16501 (3300.200000 / s)
-#eff. upd rate: 40.266529 
-#update txs   : 66717 (13343.400000 / s)
+Duration      : 5001 (ms)
+#txs          : 41417 (8281.743651 / s)
+#read txs     : 8269 (1653.469306 / s)
+#eff. upd rate: 40.024628 
+#update txs   : 33148 (6628.274345 / s)
 #aborts       : 0 (0.000000 / s)
   #lock-r     : 0 (0.000000 / s)
   #lock-w     : 0 (0.000000 / s)

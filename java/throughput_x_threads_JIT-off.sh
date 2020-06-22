@@ -9,13 +9,13 @@ rm -rf $BASEPLOTPATH/$CONTAINER $BASEPLOTPATH/$SIMUPATHFILE && mkdir $BASEPLOTPA
 for FILE in 1 2 3 4 5
 do
 	mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
+    for ALG in CoarseGrainedListBasedSet
     do
 		mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG
-		for LIST_SIZE in 100
+		for LIST_SIZE in 100 1000 8000
 		do
 			mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE
-	    	for UPDATE_RATIO in 0 10 25 75 100
+	    	for UPDATE_RATIO in 0 10 100
 	    	do
 				mkdir $BASEPLOTPATH/$CONTAINER/update_compare_$FILE/$ALG/$LIST_SIZE/$UPDATE_RATIO	
             done
@@ -26,13 +26,13 @@ done
 # Excutes simulations
 for FILE in 1 2 3 4 5
 do
-    for ALG in CoarseGrainedListBasedSet HandsOverHandsSet
+    for ALG in CoarseGrainedListBasedSet
     do
-		for LIST_SIZE in 100
+		for LIST_SIZE in 100 1000 8000
 		do
-	    	    for UPDATE_RATIO in 0 10 25 75 100
+	    	    for UPDATE_RATIO in 0 10 100
 	    	    do 
- 					for THREADS in 1 2 4 8 16 32
+ 					for THREADS in 1 4 8 12
 					do
 						LIST_RANGE=$((LIST_SIZE * 2))
                     			if [ $ALG == LazySkipList ]
