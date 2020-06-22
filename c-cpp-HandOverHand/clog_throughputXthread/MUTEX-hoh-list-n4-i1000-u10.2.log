@@ -1,0 +1,94 @@
+Set type     : linked list
+Length       : 5000
+Initial size : 1000
+Nb threads   : 4
+Value range  : 2000
+Seed         : 0
+Update rate  : 10
+Lock alg     : 1
+Alternate    : 0
+Effective    : 0
+Type sizes   : int=4/long=8/ptr=8/word=8
+Initializing STM
+Adding 1000 entries to set
+Set size     : 1000
+Creating thread 0
+Creating thread 1
+Creating thread 2
+Creating thread 3
+STARTING...
+STOPPING...
+Thread 0
+  #add        : 4010
+    #added    : 2071
+  #remove     : 4077
+    #removed  : 2070
+  #contains   : 72534
+  #found      : 36303
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 1
+  #add        : 3816
+    #added    : 1934
+  #remove     : 3923
+    #removed  : 1933
+  #contains   : 70218
+  #found      : 35147
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 2
+  #add        : 4025
+    #added    : 2025
+  #remove     : 3898
+    #removed  : 2024
+  #contains   : 71468
+  #found      : 35902
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Thread 3
+  #add        : 3948
+    #added    : 1970
+  #remove     : 3935
+    #removed  : 1970
+  #contains   : 71522
+  #found      : 35919
+  #aborts     : 0
+    #lock-r   : 0
+    #lock-w   : 0
+    #val-r    : 0
+    #val-w    : 0
+    #val-c    : 0
+    #inv-mem  : 0
+  Max retries : 0
+Set size      : 1003 (expected: 1003)
+Duration      : 5000 (ms)
+#txs          : 317374 (63474.800000 / s)
+#read txs     : 285742 (57148.400000 / s)
+#eff. upd rate: 5.040425 
+#update txs   : 31632 (6326.400000 / s)
+#aborts       : 0 (0.000000 / s)
+  #lock-r     : 0 (0.000000 / s)
+  #lock-w     : 0 (0.000000 / s)
+  #val-r      : 0 (0.000000 / s)
+  #val-w      : 0 (0.000000 / s)
+  #val-c      : 0 (0.000000 / s)
+  #inv-mem    : 0 (0.000000 / s)
+Max retries   : 0

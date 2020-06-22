@@ -17,12 +17,12 @@ Creating thread 1
 STARTING...
 STOPPING...
 Thread 0
-  #add        : 1664
-    #added    : 856
-  #remove     : 1712
-    #removed  : 855
-  #contains   : 62416
-  #found      : 31162
+  #add        : 623
+    #added    : 306
+  #remove     : 629
+    #removed  : 305
+  #contains   : 23259
+  #found      : 11709
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -32,12 +32,12 @@ Thread 0
     #inv-mem  : 0
   Max retries : 0
 Thread 1
-  #add        : 1960
-    #added    : 960
-  #remove     : 1863
-    #removed  : 960
-  #contains   : 71962
-  #found      : 36043
+  #add        : 637
+    #added    : 327
+  #remove     : 639
+    #removed  : 327
+  #contains   : 24412
+  #found      : 12328
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -48,10 +48,10 @@ Thread 1
   Max retries : 0
 Set size      : 8001 (expected: 8001)
 Duration      : 5000 (ms)
-#txs          : 141577 (28315.400000 / s)
-#read txs     : 134378 (26875.600000 / s)
-#eff. upd rate: 2.564682 
-#update txs   : 7199 (1439.800000 / s)
+#txs          : 50199 (10039.800000 / s)
+#read txs     : 47671 (9534.200000 / s)
+#eff. upd rate: 2.519971 
+#update txs   : 2528 (505.600000 / s)
 #aborts       : 0 (0.000000 / s)
   #lock-r     : 0 (0.000000 / s)
   #lock-w     : 0 (0.000000 / s)

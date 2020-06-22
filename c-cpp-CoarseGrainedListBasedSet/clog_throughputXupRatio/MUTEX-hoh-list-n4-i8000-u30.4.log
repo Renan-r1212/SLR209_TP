@@ -19,12 +19,12 @@ Creating thread 3
 STARTING...
 STOPPING...
 Thread 0
-  #add        : 2671
-    #added    : 1306
-  #remove     : 2610
-    #removed  : 1305
-  #contains   : 12511
-  #found      : 6336
+  #add        : 1304
+    #added    : 681
+  #remove     : 1366
+    #removed  : 681
+  #contains   : 5806
+  #found      : 2877
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -34,12 +34,12 @@ Thread 0
     #inv-mem  : 0
   Max retries : 0
 Thread 1
-  #add        : 3109
-    #added    : 1526
-  #remove     : 3009
-    #removed  : 1525
-  #contains   : 14105
-  #found      : 7042
+  #add        : 1922
+    #added    : 961
+  #remove     : 1920
+    #removed  : 960
+  #contains   : 8805
+  #found      : 4339
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -49,12 +49,12 @@ Thread 1
     #inv-mem  : 0
   Max retries : 0
 Thread 2
-  #add        : 2826
-    #added    : 1396
-  #remove     : 2731
-    #removed  : 1395
-  #contains   : 12821
-  #found      : 6317
+  #add        : 1973
+    #added    : 969
+  #remove     : 1858
+    #removed  : 968
+  #contains   : 8948
+  #found      : 4477
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -64,12 +64,12 @@ Thread 2
     #inv-mem  : 0
   Max retries : 0
 Thread 3
-  #add        : 2843
-    #added    : 1395
-  #remove     : 2837
-    #removed  : 1395
-  #contains   : 13410
-  #found      : 6786
+  #add        : 1583
+    #added    : 813
+  #remove     : 1592
+    #removed  : 812
+  #contains   : 7627
+  #found      : 3865
   #aborts     : 0
     #lock-r   : 0
     #lock-w   : 0
@@ -80,10 +80,10 @@ Thread 3
   Max retries : 0
 Set size      : 8003 (expected: 8003)
 Duration      : 5000 (ms)
-#txs          : 75483 (15096.600000 / s)
-#read txs     : 52847 (10569.400000 / s)
-#eff. upd rate: 14.894745 
-#update txs   : 22636 (4527.200000 / s)
+#txs          : 44704 (8940.800000 / s)
+#read txs     : 31186 (6237.200000 / s)
+#eff. upd rate: 15.311829 
+#update txs   : 13518 (2703.600000 / s)
 #aborts       : 0 (0.000000 / s)
   #lock-r     : 0 (0.000000 / s)
   #lock-w     : 0 (0.000000 / s)
